@@ -1,0 +1,314 @@
+package Calculator_package;
+
+
+import java.awt.*;
+import java.awt.event.*; 
+public class Calculator_Main {
+    TextField input;
+    String s1,n1,n2;
+	Calculator_Main() {
+		
+	Frame f = new Frame("My Calculator");
+	
+	
+	f.setLayout(null);
+	f.setSize(380,360);
+	f.setBackground(Color.CYAN);
+	f.setVisible(true);
+    f.setResizable(false);
+    
+    f.addWindowListener (new WindowAdapter() {    
+        public void windowClosing (WindowEvent e) {    
+            f.dispose();    
+        }    
+    });    
+    
+	Button b0 = new Button("0");
+	b0.setBounds(115,275, 90, 35);
+	b0.setBackground(Color.white);	
+	b0.addActionListener(new ActionListener() {
+	 @Override
+	 public void actionPerformed(ActionEvent e) {
+	 if (e.getSource()== b0	) {
+		 n1 = input.getText();
+		 s1 = n1 + "0";
+		 input.setText(s1);
+		 
+	 } 
+	 }} );
+	 
+	
+	Button b1 = new Button("1");
+	b1.setBounds(20,140, 90, 35);
+	b1.setBackground(Color.white);
+	b1.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== b1	) {
+			 n1 = input.getText();
+			 s1 = n1 + "1";
+			 input.setText(s1);
+			
+		 } 
+		 }} );
+	
+	Button b2 = new Button("2");
+	b2.setBounds(115,140, 90, 35);
+	b2.setBackground(Color.white);
+	b2.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== b2	) {
+			 n1 = input.getText();
+			 s1 = n1 + "2";
+			 input.setText(s1);
+		 } 
+		 }} );
+	
+	Button b3 = new Button("3");
+	b3.setBounds(210,140, 90, 35);
+	b3.setBackground(Color.white);
+	b3.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== b3	) {
+			 n1 = input.getText();
+			 s1 = n1 + "3";
+			 input.setText(s1);
+			
+		 } 
+		 }} );
+	
+	Button b4 = new Button("4");
+	b4.setBounds(20,185, 90, 35);
+	b4.setBackground(Color.white);
+	b4.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== b4	) {
+			 n1 = input.getText();
+			 s1 = n1 + "4";
+			 input.setText(s1);
+			
+			 
+		 } 
+		 }} );
+	
+	
+	Button b5 = new Button("5");
+	b5.setBounds(115,185, 90, 35);
+	b5.setBackground(Color.white);
+	b5.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== b5	) {
+			 n1 = input.getText();
+			 s1 = n1 + "5";
+			 input.setText(s1);
+			
+			 
+		 } 
+		 }} );
+	
+	Button b6 = new Button("6");
+	b6.setBounds(210,185, 90, 35);
+	b6.setBackground(Color.white);
+	b6.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== b6	) {
+			 n1 = input.getText();
+			 s1 = n1 + "6";
+			 input.setText(s1);
+			
+			 
+		 } 
+		 }} );
+	
+	Button b7 = new Button("7");
+	b7.setBounds(20,230, 90, 35);
+	b7.setBackground(Color.white);
+	b7.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== b7	) {
+			 n1 = input.getText();
+			 s1 = n1 + "7";
+			 input.setText(s1);
+			 
+		 } 
+		 }} );
+	
+	Button b8 = new Button("8");
+	b8.setBounds(115,230, 90, 35);
+	b8.setBackground(Color.white);
+	b8.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== b8	) {
+			 n1 = input.getText();
+			 s1 = n1 + "8";
+			 input.setText(s1);
+			
+			 
+		 } 
+		 }} );
+	
+	Button b9 = new Button("9");
+	b9.setBounds(210,230, 90, 35);
+	b9.setBackground(Color.white);
+	b9.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== b9	) {
+			 n1 = input.getText();
+			 s1 = n1 + "9";
+			 input.setText(s1);
+			
+			 
+		 } 
+		 }} );
+	
+	Button dot = new Button(".");
+	dot.setBounds(20,275, 90, 35);
+	dot.setBackground(Color.white);
+	dot.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== dot	) {
+			 input.setText(".");
+			
+			 
+		 } 
+		 }} );
+	
+	Button add = new Button("+");
+	
+	add.setBounds(305,140, 50, 35);
+	add.setBackground(Color.white);
+	add.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== add	) {
+			 input.setText("+");
+			
+			 
+		 } 
+		 }} );
+	
+	Button subt = new Button("-");
+	subt.setBounds(305,185, 50, 35);
+	subt.setBackground(Color.white);
+	subt.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== subt	) {
+			 input.setText("-");
+			
+			 
+		 } 
+		 }} );
+	
+	Button multi = new Button("*");
+	multi.setBounds(305, 230,50, 35);
+	multi.setBackground(Color.white);
+    multi.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== multi	) {
+			 input.setText("*");
+			
+			 
+		 } 
+		 }} );
+	
+	Button div = new Button("/");
+	div.setBounds(305, 275,50, 35);
+	div.setBackground(Color.white);
+	div.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== div	) {
+			 input.setText("/");
+			
+			 
+		 } 
+		 }} );
+	
+	Button total = new Button("=");
+	total.setBounds(210,275, 90, 35);
+	total.setBackground(Color.white);
+	//total.addActionListener(this);
+	
+	Button clear = new Button("Clear");
+	clear.setBounds(180,105,80, 30);
+	clear.setBackground(Color.white);
+	clear.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== clear	) {
+			 input.setText("");
+			
+			 
+		 } 
+		 }} );
+		  
+	Button delete = new Button("Delete");
+	delete.setBounds(270,105,80, 30);
+	delete.setBackground(Color.white);
+	delete.addActionListener(new ActionListener() {
+		 @Override
+		 public void actionPerformed(ActionEvent e) {
+		 if (e.getSource()== b4	) {
+			
+			 
+		 } 
+		 }} );
+	
+	
+	input = new TextField();
+	input.setBounds(20,60,340, 40);
+	input.setBackground(Color.white);
+	//input.addActionListener(this);
+	
+	TextField output = new TextField();
+	output.setBounds(20,105,150, 30);
+	output.setBackground(Color.white);
+	//output.addActionListener(this);
+	
+	Panel p = new Panel();
+	
+	
+	f.add(b0);
+	f.add(b1);
+	f.add(b2);
+	f.add(b3);
+	f.add(b4);
+	f.add(b5);
+	f.add(b6);
+	f.add(b7);
+	f.add(b8);
+	f.add(b9);
+	f.add(dot);
+	f.add(add);
+	f.add(subt);
+	f.add(div);
+	f.add(multi);
+	f.add(total);
+	f.add(clear);
+	f.add(output);
+	f.add(input);
+	f.add(delete);
+	f.add(p);
+	
+	
+	};
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       new Calculator_Main();
+	}
+	
+	
+	
+
+}
