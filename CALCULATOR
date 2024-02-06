@@ -3,9 +3,12 @@ package Calculator_package;
 
 import java.awt.*;
 import java.awt.event.*; 
+
 public class Calculator_Main {
-    TextField input;
+    TextField input,output;
     String s1,n1,n2;
+    double num1,num2,result,check;
+    
 	Calculator_Main() {
 		
 	Frame f = new Frame("My Calculator");
@@ -161,9 +164,7 @@ public class Calculator_Main {
 		 @Override
 		 public void actionPerformed(ActionEvent e) {
 		 if (e.getSource()== b9	) {
-			 n1 = input.getText();
-			 s1 = n1 + "9";
-			 input.setText(s1);
+			 input.setText("9");
 			
 			 
 		 } 
@@ -303,12 +304,80 @@ public class Calculator_Main {
 	
 	
 	};
+	
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
        new Calculator_Main();
 	}
+{
 	
+	if(e.getSource() == add) {
+		try {
+			num1 = Double.parseDouble(input.getText());
+		}catch (NumberFormatException f) {
+			input.setText("Invalid Format");
+			return;
+		}
+	s1= " ";
+	input.setText(s1);
+	check = 1;
+	}
+	if(e.getSource() == subt) {
+		try {
+			num1 = Double.parseDouble(input.getText());
+		}catch (NumberFormatException f) {
+			input.setText("Invalid Format");
+			return;
+		}
+	s1= " ";
+	input.setText(s1);
+	check = 2;
+	}
 	
-	
+	if(e.getSource() == multi) {
+	try {
+		num1 = Double.parseDouble(input.getText());
+	}catch (NumberFormatException f) {
+		input.setText("Invalid Format");
+		return;
+	}
+     s1= " ";
+     input.setText(s1);
+     check = 3;
+     
+     if(e.getSource() == div) {
+    	 try {
+    		num1 = Double.parseDouble(input.getText());
+    		}catch (NumberFormatException f) {
+    			input.setText("Invalid Format");
+    			return;
+    		}
+    	     s1= " ";
+    	     input.setText(s1);
+    	     check = 4;
+     } 
+     
+     if (e.getSource() == Delete) {
+         output.setText("");
+         output.setText("");
+     }
+     if(e.getSource() == equal) {
+     try {
+ 		num2 = Double.parseDouble(input.getText());
+ 	}catch (NumberFormatException f) {
+ 		input.setText("ENTER NUMBER FIRST");
+ 		return;
+ 	}
+  }
+    if (check == 1)
+    	result = num1+num2;
+    if (check == 2)
+    	result = num1-num2;
+    if (check == 3)
+    	result = num1*num2;
+    if (check == 4)
+    	result = num1/num2;
+    output.setText(String.valueOf(result));
+	   
+}   
 
-}
